@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Job Matcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Job Roles</h2>
+            <form id="job-form">
+                <label for="job-dropdown">Select a Job Role:</label>
+                <select id="job-dropdown" name="job">
+                    <option value="web-dev">Web Developer</option>
+                    <option value="cybersecurity">Cybersecurity Analyst</option>
+                    <option value="android-dev">Android Developer</option>
+                    <option value="ml-engineer">Machine Learning Engineer</option>
+                    <option value="full-stack">Full Stack Developer</option>
+                    <option value="data-scientist">Data Scientist/Analyst</option>
+                    <option value="cloud-engineer">Cloud Engineer</option>
+                    <option value="it-support">IT Support Engineer</option>
+                    <option value="iot-dev">IoT Developer</option>
+                    <option value="software-eng">Software Engineer (Generalist)</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="content">
+            <h1>Upload Resume (PDF Only)</h1>
+            <form id="resume-form" enctype="multipart/form-data">
+                <input type="file" id="resume-upload" accept=".pdf" required>
+                <p id="file-error" class="error"></p>
+                <button type="submit">Upload Resume</button>
+            </form>
+
+            <div id="result">
+                <h3>Matching Job Role:</h3>
+                <p id="matched-job"></p>
+
+                <h3>ATS Score:</h3>
+                <p id="ats-score"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
